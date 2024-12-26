@@ -1,4 +1,3 @@
 import "./styles.css";
-import { createPara } from "./script";
-createPara();
+import "./script";
 console.log("hello world");
