@@ -4,7 +4,6 @@ import { location as locationPage } from "./location";
 
 export const LoadPage = () => {
   // Header Section
-
   const header = document.createElement("div");
   header.classList.add(
     "h-[20%]",
@@ -17,6 +16,7 @@ export const LoadPage = () => {
   );
   document.body.appendChild(header);
 
+  // Home button
   const home = document.createElement("div");
   home.textContent = "HomePage";
   home.classList.add(
@@ -37,6 +37,7 @@ export const LoadPage = () => {
     container.appendChild(homePage());
   });
 
+  // Menu button
   const menu = document.createElement("div");
   menu.textContent = "Menu";
   menu.classList.add(
@@ -57,6 +58,7 @@ export const LoadPage = () => {
     container.appendChild(menuPage());
   });
 
+  // Location button
   const location = document.createElement("div");
   location.textContent = "Location";
   location.classList.add(
@@ -77,20 +79,17 @@ export const LoadPage = () => {
     container.appendChild(locationPage());
   });
 
+  // Load home page by default on window load
   window.onload = () => container.appendChild(homePage());
 
-  //Main Section
+  // Main Section
   const container = document.createElement("div");
   container.classList.add(
     "bg-fuchsia-500",
-    // "flex",
-    // "justify-center",
-    // "items-center",
     "w-1/2",
     "h-1/2",
     "rounded-lg",
     "my-auto"
   );
-
   document.body.appendChild(container);
 };

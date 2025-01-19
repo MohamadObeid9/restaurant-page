@@ -1,52 +1,41 @@
+import { createList } from "./createList";
+
+// Function to create and return a menu div element
 export const menu = () => {
+  // Create a div element and add padding class
   const div = document.createElement("div");
   div.classList.add("p-5");
 
+  // Create a menu list and set its text and classes
   const menu = document.createElement("ul");
   menu.textContent = "Our Menu Contains :";
   menu.classList.add("text-3xl", "mb-4", "text-yellow-400", "font-bold");
   div.appendChild(menu);
 
-  const tabouleh = document.createElement("li");
-  tabouleh.classList.add("text-slate-900", "text-lg");
-  tabouleh.textContent = "Tabbouleh";
-  const fattoush = document.createElement("li");
-  fattoush.classList.add("text-slate-900", "text-lg");
-  fattoush.textContent = "Fattoush";
-  const kebbeh = document.createElement("li");
-  kebbeh.classList.add("text-slate-900", "text-lg");
-  kebbeh.textContent = "Kebbeh";
-  const kefta = document.createElement("li");
-  kefta.classList.add("text-slate-900", "text-lg");
-  kefta.textContent = "Kefta";
-  const hummus = document.createElement("li");
-  hummus.classList.add("text-slate-900", "text-lg");
-  hummus.textContent = "Hummus";
-  const fatteh = document.createElement("li");
-  fatteh.classList.add("text-slate-900", "text-lg");
-  fatteh.textContent = "Fatteh";
-  const Foul = document.createElement("li");
-  Foul.classList.add("text-slate-900", "text-lg");
-  Foul.textContent = "Foul";
-  const babaGhanouj = document.createElement("li");
-  babaGhanouj.classList.add("text-slate-900", "text-lg");
-  babaGhanouj.textContent = "Baba Ghanouj";
-  const WarakInab = document.createElement("li");
-  WarakInab.classList.add("text-slate-900", "text-lg");
-  WarakInab.textContent = "Warak Inab";
-  const Tawouk = document.createElement("li");
-  Tawouk.classList.add("text-slate-900", "text-lg");
-  Tawouk.textContent = "Tawouk";
-  div
-    .appendChild(tabouleh)
-    .appendChild(fattoush)
-    .appendChild(kebbeh)
-    .appendChild(kefta)
-    .appendChild(hummus)
-    .appendChild(fatteh)
-    .appendChild(Foul)
-    .appendChild(babaGhanouj)
-    .appendChild(WarakInab)
-    .appendChild(Tawouk);
+  // Create menu items with their respective classes and text content
+  const tabouleh = createList("tabouleh");
+  const fattoush = createList("fattoush");
+  const kebbeh = createList("kebbeh");
+  const kefta = createList("kefta");
+  const hummus = createList("hummus");
+  const fatteh = createList("fatteh");
+  const Foul = createList("Foul");
+  const babaGhanouj = createList("babaGhanouj");
+  const WarakInab = createList("WarakInab");
+  const Tawouk = createList("Tawouk");
+
+  // Append all menu items to the menu list
+  menu.appendChild(tabouleh);
+  menu.appendChild(fattoush);
+  menu.appendChild(kebbeh);
+  menu.appendChild(kefta);
+  menu.appendChild(hummus);
+  menu.appendChild(fatteh);
+  menu.appendChild(Foul);
+  menu.appendChild(babaGhanouj);
+  menu.appendChild(WarakInab);
+  menu.appendChild(Tawouk);
+
+  // Return the div containing the menu
   return div;
 };
